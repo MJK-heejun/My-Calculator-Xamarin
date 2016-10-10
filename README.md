@@ -1,5 +1,7 @@
-Hello World
+My Calculator - Xamarin
 ===========
 
-This is a super simple hello world application. It uses a TextView to
-display a plain old hello world message via a string resource.
+ Customize your own calculator buttons!!!
+
+ This project was originally made as a web application 2 years ago. 
+ It is now wrapped by Xamarin and available on Android market.
