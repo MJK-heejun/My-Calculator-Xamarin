@@ -1,0 +1,113 @@
+
+
+
+body{
+  background-color: #EAEAEA;
+  /*#ebebeb;*/
+  font-family: Roboto;
+}
+
+
+.gridster .gridster-item {
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    
+    color: white;
+    background-color: #424242;
+    padding: 10px;
+}
+
+
+.snap-drawer{
+  background-color: #212121;
+}
+
+.snap-content{
+	background-color: #757575;
+	padding: 10px;
+}
+
+.grid-button-selected{
+  border: 1px dashed #EF5350;
+}
+
+
+
+input[type="checkbox"]{
+  width: 10px; 
+  height: 10px;
+}
+
+
+
+.modal-dialog{
+  position: absolute;
+  top: 10%;
+  left: 7%;
+  right: auto;
+  width: 80%;
+}
+
+
+.list-group-item.ng-leave{
+  -webkit-animation:fadeOut 0.5s both ease-in;   
+  animation:fadeOut 0.5s both ease-in;   
+}
+
+
+/*
+.page{
+  position: absolute;
+}
+
+
+.page-home.ng-enter{ 
+  -webkit-animation:slideInRight 0.5s both ease-in;   
+  animation:slideInRight 0.5s both ease-in; 
+}
+
+.page-home.ng-leave{ 
+  -webkit-animation:slideOutLeft 0.5s both ease-in;   
+  animation:slideOutLeft 0.5s both ease-in; 
+}
+
+.page-play.ng-enter{ 
+  -webkit-animation:slideInRight 0.5s both ease-in;   
+  animation:slideInRight 0.5s both ease-in; 
+}
+.page-play.ng-leave{ 
+  -webkit-animation:slideOutLeft 0.5s both ease-in;   
+  animation:slideOutLeft 0.5s both ease-in; 
+}
+
+
+.page-result.ng-enter{ 
+  -webkit-animation:slideInRight 0.5s both ease-in;   
+  animation:slideInRight 0.5s both ease-in; 
+}
+.page-result.ng-leave{ 
+  -webkit-animation:slideOutLeft 0.5s both ease-in;   
+  animation:slideOutLeft 0.5s both ease-in; 
+}
+*/
+
+/*
+.timer-shake{
+  -webkit-animation: shake 5s; 
+  animation: shake 5s;
+}
+*/
+
+
+/*
+
+.sample-show-hide {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.sample-show-hide.ng-hide {
+  opacity:0;
+}
+*/

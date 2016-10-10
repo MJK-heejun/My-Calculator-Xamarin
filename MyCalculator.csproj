@@ -1,0 +1,841 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{60F4286E-BC72-4C35-A584-018508BF4291}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyCalculator</RootNamespace>
+    <AssemblyName>MyCalculator</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidApplication>true</AndroidApplication>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <MonoDroidLinkMode>None</MonoDroidLinkMode>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <BundleAssemblies>False</BundleAssemblies>
+    <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+    <Debugger>Xamarin</Debugger>
+    <AotAssemblies>False</AotAssemblies>
+    <EnableLLVM>False</EnableLLVM>
+    <AndroidEnableMultiDex>False</AndroidEnableMultiDex>
+    <EnableProguard>False</EnableProguard>
+    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\main.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\strings.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular\angular.min.js.gzip" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular\angular.min.js.map" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular-animate\angular-animate.min.js.map" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular-gridster\src\angular-gridster.less" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular-route\angular-route.min.js.map" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular-touch\angular-touch.min.js.map" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\jquery\dist\jquery.min.map" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_AMS-Regular.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_Caligraphic-Bold.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_Caligraphic-Regular.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_Fraktur-Bold.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_Fraktur-Regular.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_Main-Bold.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_Main-Italic.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_Main-Regular.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_Math-BoldItalic.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_Math-Italic.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_Math-Regular.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_SansSerif-Bold.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_SansSerif-Italic.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_SansSerif-Regular.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_Script-Regular.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_Size1-Regular.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_Size2-Regular.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_Size3-Regular.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_Size4-Regular.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_Typewriter-Regular.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_WinChrome-Regular.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\otf\MathJax_WinIE6-Regular.otf" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_AMS-Regular.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_Caligraphic-Bold.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_Caligraphic-Regular.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_Fraktur-Bold.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_Fraktur-Regular.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_Main-Bold.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_Main-Italic.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_Main-Regular.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_Math-BoldItalic.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_Math-Italic.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_Math-Regular.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_SansSerif-Bold.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_SansSerif-Italic.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_SansSerif-Regular.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_Script-Regular.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_Size1-Regular.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_Size2-Regular.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_Size3-Regular.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_Size4-Regular.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\fonts\HTML-CSS\TeX\woff\MathJax_Typewriter-Regular.woff" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\mathjs\dist\math.map" />
+    <AndroidAsset Include="Assets\MyCalc\bower_components\sweetalert\lib\sweet-alert.scss" />
+    <AndroidAsset Include="Assets\MyCalc\styles\RobotoTTF\Roboto-Black.ttf" />
+    <AndroidAsset Include="Assets\MyCalc\styles\RobotoTTF\Roboto-BlackItalic.ttf" />
+    <AndroidAsset Include="Assets\MyCalc\styles\RobotoTTF\Roboto-Bold.ttf" />
+    <AndroidAsset Include="Assets\MyCalc\styles\RobotoTTF\Roboto-BoldItalic.ttf" />
+    <AndroidAsset Include="Assets\MyCalc\styles\RobotoTTF\Roboto-Italic.ttf" />
+    <AndroidAsset Include="Assets\MyCalc\styles\RobotoTTF\Roboto-Light.ttf" />
+    <AndroidAsset Include="Assets\MyCalc\styles\RobotoTTF\Roboto-LightItalic.ttf" />
+    <AndroidAsset Include="Assets\MyCalc\styles\RobotoTTF\Roboto-Medium.ttf" />
+    <AndroidAsset Include="Assets\MyCalc\styles\RobotoTTF\Roboto-MediumItalic.ttf" />
+    <AndroidAsset Include="Assets\MyCalc\styles\RobotoTTF\Roboto-Regular.ttf" />
+    <AndroidAsset Include="Assets\MyCalc\styles\RobotoTTF\Roboto-Thin.ttf" />
+    <AndroidAsset Include="Assets\MyCalc\styles\RobotoTTF\Roboto-ThinItalic.ttf" />
+    <AndroidAsset Include="Assets\MyCalc\styles\RobotoTTF\RobotoCondensed-Bold.ttf" />
+    <AndroidAsset Include="Assets\MyCalc\styles\RobotoTTF\RobotoCondensed-BoldItalic.ttf" />
+    <AndroidAsset Include="Assets\MyCalc\styles\RobotoTTF\RobotoCondensed-Italic.ttf" />
+    <AndroidAsset Include="Assets\MyCalc\styles\RobotoTTF\RobotoCondensed-Light.ttf" />
+    <AndroidAsset Include="Assets\MyCalc\styles\RobotoTTF\RobotoCondensed-LightItalic.ttf" />
+    <AndroidAsset Include="Assets\MyCalc\styles\RobotoTTF\RobotoCondensed-Regular.ttf" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular\angular-csp.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular\angular.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular-animate\angular-animate.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular-animate\index.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular-caret\caret.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular-gridster\dist\angular-gridster.min.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular-gridster\dist\angular-gridster.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular-gridster\src\angular-gridster.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular-mocks\angular-mocks.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular-mocks\index.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular-route\angular-route.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular-snap\angular-snap-only.min.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular-snap\angular-snap.min.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular-snap\angular-snap.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\angular-touch\angular-touch.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\bootstrap\dist\css\bootstrap.min.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\bootstrap\dist\js\bootstrap.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\javascript-detect-element-resize\detect-element-resize.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\javascript-detect-element-resize\jquery.resize.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\jquery\dist\jquery.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\json3\lib\json3.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\json3\lib\json3.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\MathJax.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\config\TeX-AMS-MML_HTMLorMML.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\config\TeX-AMS-MML_SVG.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\config\TeX-AMS_HTML.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\config\TeX-MML-AM_HTMLorMML.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\asciimath2jax.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\CHTML-preview.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\FontWarnings.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\HelpDialog.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\jsMath2jax.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\MatchWebFonts.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\MathEvents.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\MathMenu.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\MathZoom.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\mml2jax.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\Safe.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\tex2jax.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\toMathML.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\HTML-CSS\handle-floats.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\MathML\content-mathml.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\MathML\mml3.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\action.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\AMScd.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\AMSmath.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\AMSsymbols.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\autobold.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\autoload-all.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\bbox.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\begingroup.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\boldsymbol.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\cancel.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\color.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\enclose.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\extpfeil.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\HTML.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\mathchoice.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\mediawiki-texvc.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\mhchem.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\newcommand.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\noErrors.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\noUndefined.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\unicode.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\extensions\TeX\verb.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\jax.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\Arrows.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\BasicLatin.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\CombDiacritMarks.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\CombDiactForSymbols.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\Dingbats.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\GeneralPunctuation.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\GeometricShapes.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\GreekAndCoptic.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\Latin1Supplement.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\LetterlikeSymbols.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\MathOperators.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\MiscMathSymbolsA.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\MiscMathSymbolsB.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\MiscSymbolsAndArrows.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\MiscTechnical.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\SpacingModLetters.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\SupplementalArrowsA.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\SupplementalArrowsB.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\element\mml\optable\SuppMathOperators.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\AsciiMath\config.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\AsciiMath\jax.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\config.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\jax.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\a.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\b.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\c.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\d.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\e.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\f.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\fr.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\g.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\h.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\i.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\j.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\k.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\l.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\m.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\n.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\o.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\opf.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\p.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\q.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\r.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\s.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\scr.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\t.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\u.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\v.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\w.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\x.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\y.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\MathML\entities\z.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\TeX\config.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\input\TeX\jax.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\config.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\imageFonts.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\jax.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\fontdata-extra.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\fontdata.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\Arrows.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\BBBold.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\BoxDrawing.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\CombDiacritMarks.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\Dingbats.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\EnclosedAlphanum.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\GeneralPunctuation.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\GeometricShapes.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\GreekAndCoptic.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\Latin1Supplement.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\LatinExtendedA.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\LetterlikeSymbols.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\MathOperators.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\MiscMathSymbolsB.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\MiscSymbols.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\MiscTechnical.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\PUA.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\SpacingModLetters.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\AMS\Regular\SuppMathOperators.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Caligraphic\Bold\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Caligraphic\Regular\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Fraktur\Bold\BasicLatin.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Fraktur\Bold\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Fraktur\Bold\Other.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Fraktur\Bold\PUA.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Fraktur\Regular\BasicLatin.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Fraktur\Regular\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Fraktur\Regular\Other.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Fraktur\Regular\PUA.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Greek\Bold\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Greek\BoldItalic\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Greek\Italic\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Greek\Regular\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Bold\Arrows.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Bold\CombDiacritMarks.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Bold\CombDiactForSymbols.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Bold\GeneralPunctuation.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Bold\GeometricShapes.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Bold\Latin1Supplement.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Bold\LatinExtendedA.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Bold\LatinExtendedB.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Bold\LetterlikeSymbols.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Bold\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Bold\MathOperators.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Bold\MiscMathSymbolsA.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Bold\MiscSymbols.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Bold\MiscTechnical.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Bold\SpacingModLetters.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Bold\SupplementalArrowsA.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Bold\SuppMathOperators.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Italic\CombDiacritMarks.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Italic\GeneralPunctuation.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Italic\Latin1Supplement.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Italic\LetterlikeSymbols.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Italic\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Regular\CombDiacritMarks.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Regular\GeometricShapes.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Regular\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Regular\MiscSymbols.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Main\Regular\SpacingModLetters.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Math\BoldItalic\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Math\Italic\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\SansSerif\Bold\BasicLatin.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\SansSerif\Bold\CombDiacritMarks.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\SansSerif\Bold\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\SansSerif\Bold\Other.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\SansSerif\Italic\BasicLatin.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\SansSerif\Italic\CombDiacritMarks.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\SansSerif\Italic\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\SansSerif\Italic\Other.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\SansSerif\Regular\BasicLatin.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\SansSerif\Regular\CombDiacritMarks.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\SansSerif\Regular\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\SansSerif\Regular\Other.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Script\Regular\BasicLatin.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Script\Regular\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Script\Regular\Other.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Size1\Regular\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Size2\Regular\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Size3\Regular\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Size4\Regular\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Typewriter\Regular\BasicLatin.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Typewriter\Regular\CombDiacritMarks.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Typewriter\Regular\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\Typewriter\Regular\Other.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\WinChrome\Regular\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\WinIE6\Regular\AMS.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\WinIE6\Regular\Bold.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\MathJax\jax\output\HTML-CSS\fonts\TeX\WinIE6\Regular\Main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\mathjs\dist\math.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\snapjs\snap.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\snapjs\snap.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\sweetalert\lib\sweet-alert.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\sweetalert\lib\sweet-alert.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\bower_components\sweetalert\lib\sweet-alert.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\scripts\app.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\scripts\controllers\main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\styles\animate.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\styles\animateAssign.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\styles\customHelper.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\styles\main.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyCalc\views\main.html" />
+  </ItemGroup>
+</Project>

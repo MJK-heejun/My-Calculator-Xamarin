@@ -1,0 +1,125 @@
+
+
+<div class="modal fade" id="my_modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Result</h4>
+          </div>
+          <div class="modal-body">
+            <span mathjax-bind="expression" style="font-size: 30px;"></span>
+          </div>
+          <div class="modal-footer tal" style="font-size: 15px;">
+            = {{last_ans}}
+          </div>          
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div snap-drawer>
+    <div class="page-header" ng-click="infoPopUp()">
+      <h3 class="tac c-white">My Calculator</h3>
+      <div class="tac c-white">
+        V-1.0  
+        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">
+      </div>      
+      <div class="col-xs-3 padding-1">
+        <button class="btn btn-success btn-small width-100" ng-click="saveCurrent()">Save</button>
+      </div>
+      <div class="col-xs-3 padding-1">        
+        <button class="btn btn-success btn-small width-100" ng-click="resetAll()">Reset</button>
+      </div>
+      <div class="col-xs-3">
+      </div>      
+    </div>
+
+    <ul class="list-group" style="margin-top: 20px;">
+      <li class="list-group-item c-white row" ng-repeat="item in current_additional_items" style="background-color: #212121;">        
+        <div class="col-xs-3">
+        </div>
+        <div class="col-xs-3 btn">
+          {{item.name}}
+        </div>
+        <div class="col-xs-3 btn btn-primary" ng-click="pushElement($index)">
+          Add
+        </div>         
+        <div class="col-xs-3">
+        </div>
+      </li>
+    </ul>
+
+</div>
+
+
+<div class="snap-content" snap-content snap-options="snapOpts">
+
+  <div class="row">
+    <div class="col-xs-12 padding-0">
+      <input eb-caret="caret" type="text" class="form-control" ng-model="form_data" placeholder="Welcome To My-Calculator !" readonly/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-3 vertical-align padding-0">
+      <div class="btn btn-primary btn-xs margin-5 width-100 height-100" 
+        snap-toggle="left">
+        Menu
+      </div>
+    </div>  
+    <div class="col-xs-3 vertical-align padding-0" 
+      ng-click="locked = !locked">
+      <div class="btn btn-primary btn-xs margin-5 width-100">
+        <input type="checkbox" ng-checked="locked"/>
+        &nbsp;
+        <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+        &nbsp;Lock
+      </div>
+    </div>        
+    <div class="col-xs-3 vertical-align padding-0" 
+      ng-click="pretty_print = !pretty_print">
+      <div class="btn btn-primary btn-xs margin-5 width-100">
+        <input type="checkbox" ng-checked="pretty_print"/>
+        &nbsp;
+        <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+        &nbsp;Pretty
+      </div>
+    </div>      
+    <div class="col-xs-3 vertical-align padding-0">
+      <div ng-if="locked" class="btn btn-primary btn-xs margin-5 width-100">    
+        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+          &nbsp;Delete
+      </div>
+      <div ng-if="!locked" class="btn btn-danger btn-xs margin-5 width-100" ng-click="deleteSelected()">    
+        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+          &nbsp;Delete
+      </div>      
+    </div>          
+  </div>
+
+  <div class="row">
+      <div gridster="gridsterOpts" class="col-xs-12">
+          <ul>
+              <li class="grid-button-locked" ng-if="locked" gridster-item="item" ng-repeat="item in current_items" ng-click="insertValue(item.value)">
+                  <div class="tac margin-top-30">
+                    {{item.name}}
+                  </div>                  
+              </li>
+              <li ng-class="isGridSelected(item)" ng-if="!locked" gridster-item="item" ng-repeat="item in current_items">
+                <div class="tac margin-top-30">
+                  {{item.name}}
+                </div>
+              </li>              
+          </ul>
+      </div>
+  </div>
+
+</div>
+
